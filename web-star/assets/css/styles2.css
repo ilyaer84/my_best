@@ -1,0 +1,527 @@
+@import "font-awesome-sprockets";
+@import "font-awesome";
+ {
+    font-family: 'Comic Sans MS';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Comic Sans MS'), url('/fonts/awesome-l.woff2') format('woff2'), url('/fonts/awesome-l.woff') format('woff'), url('/fonts/awesome-l.ttf') format('ttf'), url('/fonts/awesome-l.eot') format('eot');
+    unicode-range: U+000-5FF;
+    /*  format(), чтобы указать форматы шрифтов. */
+    /*  помощью поднаборов диапазона Unicode и отдельных файлов для каждого варианта
+     стиля мы можем указать сложное семейство шрифтов, которое быстро загружается
+      и меньше весит. Пользователь будет скачивать только те варианты и поднаборы,
+       которые он увидит на странице, и ничего больше. 
+       */
+}
+
+.htitle {
+    position: relative;
+    color: black;
+    -webkit-text-stroke: .04em rgb(251, 255, 0);
+}
+
+.htitle::before {
+    /* второй слой */
+    /*  content: attr(data-text);
+    position: absolute;
+    /* в том же месте той же ширины */
+    /*   left: 0;
+    right: 0;
+    -webkit-text-stroke: .02em gold;
+    */
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+.ico_top {}
+
+.ico_sin {
+    color: royalblue;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: calc(0.6em + 0.6vw)
+}
+
+body {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    height: -webkit-fill-available;
+    background: #FFFFFF;
+    font-family: Comic Sans MS;
+}
+
+ ::before,
+ ::after {
+    box-sizing: border-box;
+}
+
+
+/*** a стили с плавным подчеркиванием ссылки***/
+
+a {
+    display: inline-block;
+    color: #ffeb3b;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    border: none;
+}
+
+a:after {
+    background-color: #ffeb3b;
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0%;
+    left: 50%;
+    position: absolute;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+a:hover:after,
+a:focus:after {
+    width: 100%;
+}
+
+
+/*** a ***/
+
+
+/* header */
+
+#header.a13-light-variant,
+#header.a13-dark-variant {
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.09);
+    background-color: #fff;
+}
+
+#header {
+    width: 100%;
+    /*  position: fixed;*/
+    top: 0;
+    left: 0;
+    z-index: 11;
+    transition: transform .5s, background-color .5s;
+    margin-top: 32px;
+    box-sizing: border-box;
+    /*    background: #fff; */
+}
+
+.head {
+    /* max-width: 1600px; */
+    padding: 0 40px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    display: table;
+    /*     display: grid;
+        grid-template-columns: 12% 60% 28%;
+        */
+}
+
+.logo-container {
+    vertical-align: middle;
+    transition: max-width .5s, min-width .5s;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+a.logo {
+    line-height: 40px;
+    color: rgba(0, 0, 0, 1);
+    font-size: 26px;
+    font-weight: bold;
+    display: block;
+    max-width: 200px;
+    word-wrap: break-word;
+    white-space: nowrap;
+    padding: 10px 0;
+    opacity: 1;
+    vertical-align: middle;
+    background: transparent 50% 50% no-repeat;
+    background-size: contain;
+    background-origin: content-box;
+    transition: max-width .5s, padding .5s, color .5s, opacity .5s;
+}
+
+a.logo img {
+    opacity: 0;
+    /* we have image so its display when no styles are applied */
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#vert {
+    display: block;
+}
+
+.topNav {
+    margin-top: 20px;
+    display: table-cell;
+    vertical-align: middle;
+    /*position: relative;
+        word-wrap: break-word;*/
+}
+
+.topNav li,
+.menu-button {
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.menu-button {
+    display: none;
+}
+
+.topNav li {
+    display: inline-block;
+}
+
+.topNav a {
+    text-decoration: none;
+    display: block;
+}
+
+.menuArea__item-active a {
+    color: #8a6540;
+}
+
+.topNav a:hover {
+    color: #f2b77d;
+}
+
+.menuArea {
+    text-align: right;
+}
+
+.header-tools {
+    padding: 0 40px 0 30px;
+    margin-top: 20px;
+    display: table-cell;
+    vertical-align: middle;
+    width: 30%;
+}
+
+
+/*grid*/
+
+.container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, 100px);
+}
+
+.container>div>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menuwrapp_mobile {
+    display: none;
+}
+
+#header #mobile-menu-opener {
+    font-size: 1em;
+    display: none;
+}
+
+
+/*  content */
+
+#content {
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 2;
+    /*transition: transform .5s;
+    margin-top: 55px;*/
+}
+
+.title-bar {
+    overflow: hidden;
+    /*    background-image: url(../img/wood.jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 250px;
+    /* for scrolling out titles */
+}
+
+.titles {
+    color: rgb(255, 255, 255);
+    max-width: 1600px;
+    text-align: center;
+    letter-spacing: 6px;
+    opacity: 0.9;
+    text-transform: uppercase;
+    top: 45%;
+    position: relative;
+}
+
+.has-effect {}
+
+.section {
+    height: 100vh;
+    width: 100vw;
+}
+
+#fullpage {
+    margin-top: 10px;
+    position: relative;
+}
+
+
+/********** 2 */
+
+.sect2 {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.my_div2 {
+    grid-column: 2;
+    grid-row: 1/3;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+}
+
+.my_div5 {
+    margin: 0 auto;
+}
+
+
+/*********2end**/
+
+
+/*********3**/
+
+.tarifcolor {
+    padding: 15px;
+    background-color: #666666;
+    border-radius: 16px 16px 0px 0px;
+    padding-top: 1px;
+    text-align: center;
+}
+
+.tarifcolor_i {
+    padding: 15px;
+    background-color: #666666;
+    border-radius: 0px 0px 16px 16px;
+    padding-top: 1px;
+    text-align: center;
+}
+
+.tarifIMG div {
+    width: 100px;
+    height: 44px;
+    margin: auto;
+    margin-top: auto;
+    border-radius: 150px;
+    border: 2px solid #fff;
+    margin-top: -30px;
+    background-size: auto auto;
+    background-repeat: no-repeat;
+    height: 100px;
+    background-position: center;
+}
+
+.zagolovok2 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    font-size: inherit;
+}
+
+.table5 {
+    /*
+        border-collapse: collapse;
+        */
+}
+
+.table5 td {
+    border: solid 1px #605c5c;
+}
+
+.chydesa {
+    display: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+.table5 .chydesa {
+    pointer-events: auto;
+    display: none;
+}
+
+.table5 tr:hover .chydesa {
+    display: inline;
+    color: #17508a;
+}
+
+.spolireMega {
+    transform: perspective(1px);
+    text-align: center;
+    margin-top: 10px;
+    position: relative;
+    font-weight: 600;
+    display: block;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 13px;
+    padding-top: 3px;
+    padding-bottom: 4px;
+}
+
+.spolireConten {
+    position: relative;
+    top: -1px;
+    display: none;
+}
+
+.cenaTarifHome {
+    padding-top: 10px;
+    color: #1a538c;
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.Fulldescription {
+    background-color: #f6f6f6;
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.DopFunc {
+    border: 1px solid #605c5c;
+    margin-bottom: -1px;
+    background-color: #fff;
+}
+
+.DopFunc p {
+    padding: 7px;
+    margin: 0px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.knopk22 {
+    background: transparent;
+    color: #777777;
+    border: 1px solid #e1771e;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px !important;
+    display: inline-block;
+    text-align: center !important;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.knopk22:hover {
+    background: #161616;
+    color: #f3f3f3;
+    text-decoration: none;
+}
+
+
+/*********3end**/
+
+
+/*
+.my_div4 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+*/
+
+
+/********** 2 */
+
+@media screen and (min-width: 350px) and (max-width: 768px) {
+    .menuArea {
+        /*   display: none;*/
+    }
+    #vert {
+        display: none;
+    }
+    .menu-button {
+        cursor: pointer;
+        display: block;
+    }
+    .topNav {
+        position: relative;
+    }
+    .topNav ul {}
+    .topNav li {
+        display: block;
+        border-bottom: 1px solid #eee;
+    }
+    .topNav a:hover {
+        background: #fafafa;
+    }
+    #header #mobile-menu-opener {
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+    /*       background: url("images/menuicon.png") no-repeat scroll 100% 50% #3f3f3f;
+ */
+}
+
+@media screen and (min-width: 350px) and (max-width: 768px) {
+    body {
+        font-size: 90%;
+    }
+    .section {}
+}

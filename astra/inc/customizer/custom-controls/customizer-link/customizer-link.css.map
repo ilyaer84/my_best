@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,sCAAsC,CAAC,gBAAgB,CAAC;EACtD,UAAU,EAAE,MAAM;EAClB,eAAe,EAAE,IAAI;CACtB",
+    "sources": [
+        "customizer-link.scss"
+    ],
+    "names": [],
+    "file": "customizer-link.css"
+}

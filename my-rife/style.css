@@ -1,0 +1,32 @@
+/**
+Theme Name: my-rife
+Theme URI: 
+Author: ER
+Author URI: 
+Description: Дочерняя тема Astra
+Template: rife-free
+Version: 1.1.0
+License: 
+License URI: 
+Text Domain: astra
+Domain Path: /languages
+Tags: custom-menu, custom-logo, entertainment, one-column, two-columns, left-sidebar, e-commerce, right-sidebar, custom-colors, editor-style, featured-images, full-width-template, microformats, post-formats, rtl-language-support, theme-options, threaded-comments, translation-ready, blog
+ */
+
+/* импортируем стили родительской темы */
+/*@import url("../rife-free/style.css");
+
+/* Свои дополнительные стили */
+.head {
+   top: 50px;
+}
+
+.fffffff {
+   z-index: 9999;
+   color: aqua;
+   height: 55px;
+   position: absolute;
+   display: flex;
+   top: 0;
+   background: blueviolet;
+}

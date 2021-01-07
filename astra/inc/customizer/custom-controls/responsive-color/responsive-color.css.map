@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACE,uCADqC,CACrC,0BAA0B,CAAC,oBAAoB,CAAC;EAC9C,OAAO,EAAE,IAAI;CAId;;AANH,AAGI,uCAHmC,CACrC,0BAA0B,CAAC,oBAAoB,AAE5C,OAAO,CAAC;EACP,OAAO,EAAE,KAAK;CACf",
+    "sources": [
+        "responsive-color.scss"
+    ],
+    "names": [],
+    "file": "responsive-color.css"
+}
